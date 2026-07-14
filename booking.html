@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>TravIndia-Discover India</h1>
+    </header>
+    <main>
+        <form action="process_booking.php" method="POST">
+    
+    <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="fullName" required>
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="text" id="name" name="email" required>
+    </div>
+    <div>
+        <label for="phone">Mobile</label>
+        <div style="display:flex; gap:5px;">
+            <select id="countryCode" name="countryCode" required >
+                <option value="+91">🇮🇳 +91</option>
+                <option value="+1">🇺🇸 +1</option>
+                <option value="+44">🇬🇧 +44</option>
+            </select>
+            <input type="tel" id="phone" name="phone" placeholder="9876543210" pattern="\[0-9]{10}" required>
+    </div>
+    
+    
+    <div class="form-group">
+        <label for="package">Select Package</label>
+        <select id="package" name="package" required>
+            <option value="paris">Goa</option>
+            <option value="tokyo">Jaipur</option>
+            <option value="tokyo">Ladakh</option>
+            <option value="tokyo">Manali</option>
+             
+        </select>
+    </div>
+
+    
+    <div class="form-group">
+        <label for="date">Travel Date</label>
+        <input type="date" id="date" name="date" required>
+    </div>
+    <div>
+        <label for="numbers">Number of people</label>
+        <input type="number" id="peopleSlider" name="guests" min="1" max="10" value="2" step="1">
+    </div>
+    
+    <button type="submit">Submit Application</button>
+</form>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 TravIndia. All rights reserved.</p>
+    </footer>
+</body>
+</html>
